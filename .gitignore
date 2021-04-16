@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Composer template
+composer.phar
+.php_cs
+*.cache
+vendor/
+bin/
+.phpunit.result.cache
+.idea
+composer.lock

@@ -1,6 +1,6 @@
 Command Extra Bundle
 ==========
-[![Build CommandExtraBundle](https://github.com/DaanBiesterbos/CommandExtraBundle/actions/workflows/build.yaml/badge.svg)](https://github.com/DaanBiesterbos/CommandExtraBundle/actions/workflows/build.yaml)
+[![Build CommandExtraBundle](https://github.com/DaanBiesterbos/CommandExtraBundle/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/DaanBiesterbos/CommandExtraBundle/actions/workflows/build.yaml)
 [![Latest Stable Version](https://poser.pugx.org/daanbiesterbos/command-extra-bundle/v/stable.svg)](https://packagist.org/packages/daanbiesterbos/command-extra-bundle)
 [![Total Downloads](https://poser.pugx.org/daanbiesterbos/command-extra-bundle/downloads.svg)](https://packagist.org/packages/daanbiesterbos/command-extra-bundle)
 

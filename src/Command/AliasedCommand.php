@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * Command Extra Bundle
+ *
+ * Issues can be submitted here:
+ * https://github.com/daanbiesterbos/CommandExtraBundle/issues
+ */
+
 namespace DaanBiesterbos\CommandExtraBundle\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -8,9 +15,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class AliasedCommand
- *
- * @package DaanBiesterbos\CommandExtraBundle\Command
+ * Class AliasedCommand.
  */
 class AliasedCommand extends Command
 {
@@ -23,7 +28,7 @@ class AliasedCommand extends Command
      * ConfigurableCommand constructor.
      *
      * @param array $aliasConfig
-     * @param null $name
+     * @param null  $name
      */
     public function __construct(array $aliasConfig, $name = null)
     {
@@ -43,8 +48,9 @@ class AliasedCommand extends Command
     }
 
     /**
-     * @param InputInterface $input
+     * @param InputInterface  $input
      * @param OutputInterface $output
+     *
      * @return int|void
      */
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -53,7 +59,7 @@ class AliasedCommand extends Command
         $cmdConfigs = $this->aliasConfig['execute'] ?? [];
         foreach ($cmdConfigs as $cmdConfig) {
             $exitCode = $this->runCommand($input, $output, $cmdConfig);
-            if ($exitCode !== 0) {
+            if (0 !== $exitCode) {
                 return $exitCode;
             }
         }
@@ -62,9 +68,10 @@ class AliasedCommand extends Command
     }
 
     /**
-     * @param InputInterface $input
+     * @param InputInterface  $input
      * @param OutputInterface $output
-     * @param array $cmdConfig
+     * @param array           $cmdConfig
+     *
      * @return int
      */
     private function runCommand(InputInterface $input, OutputInterface $output, array $cmdConfig): int

@@ -30,14 +30,14 @@ return [
 Finally, configure the bundle:
 
 ``` yaml
-# config/command_extra.yaml
+# config/packages/command_extra.yaml
 command_extra:
   aliases:
     # Shorthand to update the master branch.
     checkout:
-      name: 'update-master'
-      description: 'Checkout tg/master branch.'
-      cmd: ''
+      name: 'ps'
+      description: 'Shorthand example to run a non symfony command'
+      execute: 'ps -aux'
     cache_purge:
       name: 'cache:purge'
       description: 'Prune cache pools and application cache.'
@@ -47,6 +47,5 @@ command_extra:
           symfony: true
         app_cache:
           command: 'cache:clear'
-          arguments: ['--env=prod']
           symfony: true
 ```

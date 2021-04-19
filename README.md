@@ -33,15 +33,19 @@ Finally, configure the bundle:
 # config/packages/command_extra.yaml
 command_extra:
   aliases:
-    # Shorthand to update the master branch.
-    checkout:
+    # Example 1:
+    # Register alias to run a non symfony command.
+    ps:
       name: 'ps'
-      description: 'Shorthand example to run a non symfony command'
-      execute: 'ps -aux'
+      description: 'Shorthand example of a non symfony command.'
+      execute: 'ps -aux'  # This shorthand is for non-symfony commands only.
+    # Example 2
+    # Register alias that runs two symfony commands when invoked.
     cache_purge:
       name: 'cache:purge'
       description: 'Prune cache pools and application cache.'
       execute:
+        # Run multiple commands 
         cache_pool:
           command: 'cache:pool:prune'
           symfony: true
